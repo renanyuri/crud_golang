@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Lista de Produtos</title>
+    </head>
+    <body>
+        <h3>Lista de Produtos</h3>
+        <a href="/product/add">Add</a>
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+            {{range .products}}
+                <tr>
+                    <td>{{.Id}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.Size}}</td>
+                    <td>{{.Price}}</td>
+                    <td>{{.Quantity}}</td>
+                    <td>
+                        <a href="/product/edit?={{.Id}}">Edit</a>
+                        <a href="/product/delete?id={{.Id}}" onclick="return confirm('Are you sure?')"></a> Delete</td>
+                </tr>
+            {{end}}
+        </table>
+    </body>
+</html>

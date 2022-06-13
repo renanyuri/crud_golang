@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Adicionar Produtos</title>
+    </head>
+    <body>
+        <h3>Adicionar Produtos</h3>
+        <form method="POST" action="/product/processadd">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td><input type="text" name="size"></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input type="text" name="price"></td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td><input type="number" name="quantity" min="0"></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="submit" value="Save"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
